@@ -19,6 +19,7 @@
   header {
     border-bottom: 1px solid rgba(0,0,0,0.08);
     background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
   }
 
@@ -184,6 +185,7 @@
     padding: 80px 32px;
     text-align: center;
     background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
   }
 
@@ -288,8 +290,8 @@
   }
 
   .footer-social a {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -313,6 +315,7 @@
   }
 
   @media (max-width: 640px) {
+    body { background-attachment: scroll; }
     .site-footer { padding: 40px 24px 28px; text-align: center; }
     .footer-grid { justify-content: center; text-align: center; }
     .footer-col p, .footer-col a { justify-content: center; }
@@ -323,9 +326,17 @@
     .top-bar { flex-wrap: wrap; gap: 14px; padding: 12px 18px; justify-content: center; }
     .main-nav { flex-direction: column; gap: 14px; padding: 10px 18px 18px; }
     nav.links { flex-wrap: wrap; justify-content: center; gap: 14px 18px; }
-    .hero { height: 520px; }
+    .hero { height: 460px; }
     .countdown-card { left: 16px; top: 20px; width: calc(100% - 32px); padding: 14px 16px; }
-    .countdown-unit .num { font-size: 22px; }
+    .countdown-row { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .countdown-unit .num { font-size: 20px; }
+    .countdown-arrow { width: 34px; height: 34px; margin-left: 0; }
+  }
+
+  @media (max-width: 380px) {
+    .hero { height: 420px; }
+    .countdown-card { padding: 12px 14px; }
+    .countdown-unit .num { font-size: 18px; }
   }
 </style>
 </head>
